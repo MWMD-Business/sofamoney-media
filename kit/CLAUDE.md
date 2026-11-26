@@ -10,6 +10,7 @@ The owner is **Mohammed** (founder, based in Navan, Ireland). He is not a progra
 - **He loves pop-up questions.** Before building anything, ask him with the AskUserQuestion tool:
   the idea (offer 3-4 concrete options), the hook, the look, the sound, voice or text only, the length.
   Give real options with short descriptions and put your recommendation first.
+- **Ask plenty of pop-up questions, and keep every message short** (no extra words). Mohammed asked for this (26 Nov).
 - Show him progress early (a few test frames) so he can steer before the long render.
 - He posts the videos himself. Never try to post anything.
 
