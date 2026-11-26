@@ -30,3 +30,4 @@ Did you spot the console flying out of the box in the first second? 👀
   warm music) plus the Sofa Money sound pack: night vision, scan beep, pop, cash register, whoosh.
 - Voices: Mom = Kokoro af_heart ("It's only old junk, love. Straight in the bin." / "Right. I'll get the other boxes.")
   Narrator = Kokoro am_fenrir ("Check it before you bin it." / "Sofa Money. Coming soon to Google Play.")
+- Checks passed: speech check 4/4 lines heard, loudness -14.2 LUFS, true peak -1.8 dB, 10+ frames checked (all text inside the safe area, no glare).
