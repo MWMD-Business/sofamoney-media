@@ -1,0 +1,6 @@
+node_modules/
+.venv/
+out/*
+!out/README.txt
+__pycache__/
+*.tmp.mp4

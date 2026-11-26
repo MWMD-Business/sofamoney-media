@@ -1,0 +1,19 @@
+{
+  "name": "sofa-money-video-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Makes Sofa Money Reels: three.js scenes rendered in headless Chromium, sound made in Python. See CLAUDE.md.",
+  "scripts": {
+    "browser": "playwright install chromium",
+    "check": "node -e \"console.log('Run: .venv/Scripts/python tools/check_setup.py  (Mac/Linux: .venv/bin/python)')\""
+  },
+  "dependencies": {
+    "@fontsource/anton": "5.0.8",
+    "@fontsource/chakra-petch": "5.0.12",
+    "@fontsource/inter": "5.0.16",
+    "@fontsource/jetbrains-mono": "5.0.18",
+    "@fontsource/space-grotesk": "5.0.16",
+    "playwright": "1.63.0",
+    "three": "0.160.0"
+  }
+}

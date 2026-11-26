@@ -1,0 +1,30 @@
+SOFA MONEY — "Someone's on the top floor" (launch teaser, 16 s, 1080x1920)
+Status: made for Mohammed to check and post himself. Nothing gets posted automatically.
+
+=== CAPTION ===
+02:47. The security radio crackles: "Someone's on the top floor." 👀
+
+The building isn't finished. The lift goes up anyway.
+Gold light under the last door… and something rolls out. 🪙
+
+It's Euro Eddie. And the build is almost complete.
+
+What's the first thing you'll scan when it lands?
+
+Sofa Money 🛋️💸 Coming soon to Google Play.
+
+Demo app · Made with AI
+
+#sofamoney #ireland #comingsoon #googleplay #moneytips #sidehustle #declutter
+
+=== PINNED COMMENT (post it, then Mohammed pins it) ===
+Did you spot the round shadow in the window before the door opened? 👀
+
+=== POSTING NOTES ===
+- AI label ON (Advanced settings).
+- Cover: covers/cover-top-floor.jpg (text sits inside the 3:4 grid crop).
+- No money amounts in this one. The app screen is marked DEMO, and it says "coming soon", because the app isn't on Google Play yet.
+- Sounds: all synthesised (trailer braams, risers, heartbeat, wind, lift, coin roll and wobble, warm music)
+  plus the Sofa Money sound pack: walkie chirp (frame 0 and the last second, so it loops), whoosh, scan beep.
+- Voice: Kokoro am_fenrir. Lines: "The build is almost complete." / "Sofa Money. Coming soon to Google Play."
+- Checks passed: speech check heard both lines ("Sofa Money" heard as "so for money", the known quirk), loudness -14.1 LUFS, true peak -1.8 dB, frames checked at 10 moments.

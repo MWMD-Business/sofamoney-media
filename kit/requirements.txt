@@ -1,0 +1,11 @@
+# Python 3.10-3.12 only (3.13 can't install the voice). Install with:
+#   Windows:      py -3.12 -m venv .venv   then   .venv/Scripts/python -m pip install -r requirements.txt
+#   Mac / Linux:  python3.12 -m venv .venv then   .venv/bin/python -m pip install -r requirements.txt
+# The first voice run downloads the Kokoro model and an English word list; the first speech check
+# downloads the Whisper "small.en" model. Both come from the internet once, then they're cached.
+kokoro==0.9.4
+misaki[en]==0.9.4
+faster-whisper==1.2.1
+soundfile>=0.12
+numpy>=1.26
+scipy>=1.11

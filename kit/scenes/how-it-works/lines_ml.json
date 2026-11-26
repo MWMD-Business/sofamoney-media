@@ -1,0 +1,5 @@
+[{"id":"ml1","voice":"bm_lewis","text":"This is M W D Line.","speed":0.98,"pitch":-1},
+ {"id":"ml2","voice":"bm_lewis","text":"Hold the button, and your voice goes live to your whole crew.","speed":1.05,"pitch":-1},
+ {"id":"ml3","voice":"bm_lewis","text":"Only people with your crew code can get in.","speed":1.05,"pitch":-1},
+ {"id":"ml4","voice":"bm_lewis","text":"Send sounds, drop messages, and see who's on.","speed":1.05,"pitch":-1},
+ {"id":"ml5","voice":"bm_lewis","text":"And most of it is free.","speed":1.0,"pitch":-1}]

@@ -1,0 +1,5 @@
+[{"id":"sk1","voice":"bm_george","text":"This is Safe Key.","speed":1.0,"pitch":-2},
+ {"id":"sk2","voice":"bm_george","text":"Inside, there's a tiny chip and an antenna. No battery. No charging.","speed":1.05,"pitch":-2},
+ {"id":"sk3","voice":"bm_george","text":"On the back, a QR code, for phones without the chip reader.","speed":1.05,"pitch":-2},
+ {"id":"sk4","voice":"bm_george","text":"Tap it on any phone, and your family's help page opens.","speed":1.05,"pitch":-2},
+ {"id":"sk5","voice":"bm_george","text":"Send your location to Mom, or call home. In one tap.","speed":1.05,"pitch":-2}]
