@@ -140,6 +140,8 @@ Keep music low under the narrator (duck it), and make sound effects end before a
 **Labels:** every amount says Example and app screens say Demo (e.g. "Example amounts · Demo app"). Any real
 fact needs a reliable source, shown on screen and in the caption. Stories that only use Example amounts need
 no source. When Mohammed posts, the **AI label is always on**.
+**Never write "Made with AI" (or any AI text) in anything you make**: not in videos, end cards, Stories, covers or
+captions. Mohammed asked for this (26 Nov). The only AI marking is Instagram's own AI label switch when he posts.
 
 **Comments:** no comment-bait and no share-bait ("comment YES if..."). A real question in the pinned comment is fine.
 
@@ -184,7 +186,7 @@ into the bin, freeze, rewind, scan) · unwanted Christmas presents (late Decembe
 - Cover: a strong frame, text inside the **3:4 grid crop** (the middle 1080x1440, y 240-1680).
 - Caption file in `captions/` like `captions/Caption-Reel-46-Hidden-Room.txt`: hook line, 2-4 short lines of
   story, a real question, "Scan your room with Sofa Money 👉 link in bio",
-  "Demo app · Example amounts (AI estimates, not offers) · Made with AI", 5-7 hashtags
+  "Demo app · Example amounts (AI estimates, not offers)" (no "Made with AI"), 5-7 hashtags
   (#sofamoney #ireland ...), a pinned-comment question, and posting notes (AI label ON, cover file).
 
 ## 6. What's where

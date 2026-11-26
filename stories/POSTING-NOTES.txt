@@ -12,6 +12,6 @@ SOFA MONEY STORIES — launch set (6 frames, 1080x1920). Post them in this order
 6  story-6-ad-squad.jpg                "More Sofa Money ads are coming. Made by @mwdonig, @aint1eo + more creators."
    -> Add MENTION stickers for @mwdonig and @aint1eo so they get notified and can reshare.
 
-- Turn on the AI label for stories 1, 2, 4, 5, 6 (they use the 3D renders).
+- No "Made with AI" text in the pictures. Use Instagram's own AI label switch when you post if you want it.
 - All amounts say Example, the app screen says Demo. No real facts stated.
 - Nothing is posted automatically.
