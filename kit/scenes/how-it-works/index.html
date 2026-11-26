@@ -185,5 +185,6 @@ await document.fonts.load('800 40px Inter');await document.fonts.load('700 40px 
 // redraw canvases now fonts are ready
 scene.traverse(o=>{const mp=o.material&&o.material.map;if(mp&&mp.userData&&mp.userData.draw){try{redraw(mp)}catch(e){}}});
 try{window.DUR=await (await fetch('dur_'+P+'.json')).json()}catch(e){window.DUR={}}
+if(new URLSearchParams(location.search).get('clean'))document.getElementById('ov').style.display='none';
 window.ready=true;
 </script></body></html>
