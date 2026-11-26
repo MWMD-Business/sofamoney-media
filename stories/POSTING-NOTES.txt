@@ -1,0 +1,17 @@
+SOFA MONEY STORIES — launch set (6 frames, 1080x1920). Post them in this order, the same day.
+
+1  story-1-top-floor-new-reel.jpg      New reel: "Someone's on the top floor."
+   -> Better still: share the actual reel to your story, then post this frame right before it.
+2  story-2-build-almost-complete.jpg   "The build is almost complete." Euro Eddie + Demo 97% bar.
+3  story-3-coming-soon-google-play.jpg "Coming soon to Google Play."
+   -> When you have a launch date, add a Countdown sticker here ("Sofa Money on Google Play").
+4  story-4-built-by-mwdonig.jpg        "That light on the top floor every night? @mwdonig is building Sofa Money."
+   -> Add a MENTION sticker for @mwdonig (text in a picture doesn't tag anyone).
+5  story-5-dont-bin-it-new-reel.jpg    New reel: "Mom's about to bin €2,860" (Example amount).
+   -> Share the reel to your story right after it.
+6  story-6-ad-squad.jpg                "More Sofa Money ads are coming. Made by @mwdonig, @aint1eo + more creators."
+   -> Add MENTION stickers for @mwdonig and @aint1eo so they get notified and can reshare.
+
+- Turn on the AI label for stories 1, 2, 4, 5, 6 (they use the 3D renders).
+- All amounts say Example, the app screen says Demo. No real facts stated.
+- Nothing is posted automatically.

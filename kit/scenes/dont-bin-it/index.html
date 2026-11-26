@@ -395,5 +395,7 @@ await document.fonts.load('800 40px Inter');await document.fonts.load('900 40px 
 
 // cover mode (?cover=1): hook text moved down so it sits inside Instagram's 3:4 grid crop
 if(new URLSearchParams(location.search).get('cover'))$('hook').style.top='300px';
+// clean mode (?clean=1): no text overlays or bars, for story backgrounds
+if(new URLSearchParams(location.search).get('clean'))document.getElementById('ov').style.display='none';
 window.ready=true;
 </script></body></html>

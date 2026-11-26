@@ -491,5 +491,7 @@ for(const [tex,fn] of [[faceMap,(g,w,h)=>eddieFace(g,w,h,false)],[faceBump,(g,w,
 {const c=signImg.image,g=c.getContext('2d');const w=c.width,h=c.height;g.fillStyle='#d8b51e';g.fillRect(0,0,w,h);g.fillStyle='#111';g.fillRect(14,14,w-28,90);g.fillStyle='#d8b51e';g.font='900 64px Inter';g.textAlign='center';g.textBaseline='middle';g.fillText('DANGER',w/2,60);g.fillStyle='#111';g.font='800 44px Inter';g.fillText('CONSTRUCTION SITE',w/2,170);g.fillText('KEEP OUT',w/2,240);g.font='600 30px Inter';g.fillText('SECURITY ON PATROL',w/2,320);signImg.needsUpdate=true}
 // cover mode (?cover=1): hook text moved down so it sits inside Instagram's 3:4 grid crop
 if(new URLSearchParams(location.search).get('cover'))$('hook').style.top='300px';
+// clean mode (?clean=1): no text overlays or bars, for story backgrounds
+if(new URLSearchParams(location.search).get('clean'))document.getElementById('ov').style.display='none';
 window.ready=true;
 </script></body></html>
