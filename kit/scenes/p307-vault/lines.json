@@ -1,0 +1,12 @@
+[
+ {"id": "e1", "voice": "am_echo", "text": "One person built all of these.", "speed": 0.95},
+ {"id": "f1", "voice": "am_fenrir", "text": "File one. It's Sofa Money. Coming to Google Play.", "speed": 1.03},
+ {"id": "e2", "voice": "am_echo", "text": "File two. It's called Safe Key.", "speed": 0.92},
+ {"id": "f2", "voice": "am_fenrir", "text": "File three. M W D Line.", "speed": 1.0},
+ {"id": "e3", "voice": "am_echo", "text": "Three products.", "speed": 0.95},
+ {"id": "f3", "voice": "am_fenrir", "text": "One creator.", "speed": 1.0},
+ {"id": "e4", "voice": "am_echo", "text": "File four is empty.", "speed": 0.95},
+ {"id": "f4", "voice": "am_fenrir", "text": "It could be yours.", "speed": 1.0},
+ {"id": "e5", "voice": "am_echo", "text": "Got an app, or a product idea?", "speed": 0.97},
+ {"id": "f5", "voice": "am_fenrir", "text": "Build it with Project three oh seven.", "speed": 1.02}
+]

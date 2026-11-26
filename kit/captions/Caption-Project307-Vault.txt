@@ -1,0 +1,34 @@
+PROJECT 307 — "The Vault" (join us, 22 s, 1080x1920) — for @project307am
+Status: made for Mohammed to check and post himself. Nothing gets posted automatically.
+
+=== CAPTION ===
+One person built all of these. 🔒
+
+File 001: Sofa Money. Coming to Google Play.
+File 002: Safe Key. Declassified.
+File 003: MWD LINE. Declassified.
+
+File 004 is empty. It could be yours.
+
+Got an app or a product idea? Build it with Project 307.
+DM @project307am 📩
+
+Run by @mwdonig · Marketing: @aint1eo, @umerijaz_1
+
+What would you build first?
+
+#project307 #buildinpublic #startup #appdevelopment #founder #sofamoney #ireland
+
+=== PINNED COMMENT (post it, then pin it) ===
+What's your idea? One line is enough. 👀
+
+=== POSTING NOTES ===
+- Cover: covers/cover-project307-vault.jpg (text sits inside the 3:4 grid crop).
+- Tag @mwdonig, @aint1eo and @umerijaz_1 with "Tag people" (or invite them as Collaborators).
+- No "Made with AI" text anywhere. Use Instagram's own AI label switch if you want it.
+- The Sofa Money app screen is marked DEMO. No money amounts. No real facts stated, so no source needed.
+- Voices: Project 307 = Kokoro am_echo, Sofa Money narrator = Kokoro am_fenrir, taking turns.
+- Sounds: all synthesised (vault hum, relay clunks, light buzz, trailer hits, stamp thuds, heartbeat)
+  plus the sound pack: walkie chirp (MWD LINE), scan beep (Safe Key), whoosh.
+- Checks: loudness -14.3 LUFS, true peak -1.9 dB, 12 frames checked. Speech check heard all 10 lines
+  (it writes "Safe Key" as one word, "SafeKey", so its strict text match flags that one).
