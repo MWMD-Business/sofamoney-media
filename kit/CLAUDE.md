@@ -187,7 +187,7 @@ into the bin, freeze, rewind, scan) · unwanted Christmas presents (late Decembe
 - Cover: a strong frame, text inside the **3:4 grid crop** (the middle 1080x1440, y 240-1680).
 - Caption file in `captions/` like `captions/Caption-Reel-46-Hidden-Room.txt`: hook line, 2-4 short lines of
   story, a real question, "Scan your room with Sofa Money 👉 link in bio",
-  "Demo app · Example amounts (AI estimates, not offers)" (no "Made with AI"), 5-7 hashtags
+  "Demo app · Example amounts" (no AI text), 5-7 hashtags
   (#sofamoney #ireland ...), a pinned-comment question, and posting notes (AI label ON, cover file).
 
 ## 6. What's where

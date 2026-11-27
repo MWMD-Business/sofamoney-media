@@ -3,6 +3,7 @@
 //   node tools/render.js scenes/hidden-room shots 1,4.5,8 out/hr        -> out/hr_1.00.jpg, out/hr_4.50.jpg, ...
 //   node tools/render.js scenes/hidden-room video 0 14.3 out/hidden-room_video.mp4
 //   node tools/render.js "scenes/how-it-works?p=sm" video 0 18.6 out/hiw_video.mp4   (?p=... is passed to the page)
+//   VIEW=1080x1350 node tools/render.js "scenes/carousel-640?s=1" shots 0 out/car1   (feed post / carousel size)
 //
 // The page must set window.ready = true when it has loaded, and expose window.renderAt(t) that draws
 // the frame for time t (seconds). Every frame is drawn from t alone, so renders are repeatable.
@@ -48,7 +49,8 @@ function usage() {
 
   const srv = await serve(); const port = srv.address().port;
   const br = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
-  const pg = await br.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
+  const [VW, VH] = (process.env.VIEW || '1080x1920').split('x').map(Number);   // VIEW=1080x1350 for feed posts / carousels
+  const pg = await br.newPage({ viewport: { width: VW, height: VH }, deviceScaleFactor: 1 });
   pg.on('console', m => { if (m.type() === 'error') console.log('PAGE', m.text()); });
   pg.on('pageerror', e => console.log('PAGEERR', e.message));
   await pg.goto(`http://127.0.0.1:${port}/${dp}/index.html${dq ? '?' + dq : ''}`);
