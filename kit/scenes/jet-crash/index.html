@@ -49,20 +49,29 @@ canvas{position:absolute;left:0;top:0}
 #end .w{font:700 150px/1 Grot;letter-spacing:-.02em;margin-top:50px}
 #end .l{font:700 50px/1.2 Inter;color:#EEF3EC;margin-top:36px}
 #end .l b{color:#F2C14E;font-weight:700}
+#slow{position:absolute;right:70px;top:160px;font:700 34px Grot;letter-spacing:.2em;color:#fff;opacity:0;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#slow i{display:inline-block;width:20px;height:20px;border-radius:50%;background:#FF3B30;margin-right:12px;vertical-align:middle;box-shadow:0 0 14px #FF3B30}
+#redv{position:absolute;inset:0;opacity:0;background:radial-gradient(85% 60% at 50% 50%,rgba(255,40,30,0) 55%,rgba(255,40,30,.55) 100%)}
+#frz{position:absolute;inset:112px 0;border:16px solid #fff;opacity:0}
+#ring{position:absolute;width:300px;height:190px;margin:-95px 0 0 -150px;border:9px solid #F2C14E;border-radius:50%;opacity:0;filter:drop-shadow(0 0 12px rgba(242,193,78,.9))}
+#jbr{position:absolute;opacity:0;filter:drop-shadow(0 0 10px rgba(242,193,78,.9))}
+#jbr i{position:absolute;width:60px;height:60px;border:7px solid #F2C14E}
+#jbr i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0;border-top-left-radius:16px}#jbr i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0;border-top-right-radius:16px}
+#jbr i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0;border-bottom-left-radius:16px}#jbr i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0;border-bottom-right-radius:16px}
 #flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:15}
 </style></head><body>
 <div id="ov">
  <div id="hook"><div class="a sh">POV: you just crashed a</div><div class="b gold">€4,000,000</div><div class="c sh">JET.</div></div>
  <div id="toy" class="sh" style="opacity:0"><div class="a">Relax.</div><div class="b">IT'S A TOY.</div></div>
  <div id="year" style="opacity:0"><div class="a sh">…from</div><div class="b gold">1959.</div></div>
- <div id="hud" style="opacity:0"><div class="dot"></div>SOFA MONEY · SCAN<div class="demo">DEMO</div></div>
- <div id="ptag" style="opacity:0"><div class="n">Vintage tin jet + box</div><div class="v" id="pv">~€1,850</div><div class="x">EXAMPLE</div></div>
+ <div id="hud" style="opacity:0"><div class="dot"></div>SOFA MONEY · SCAN</div>
+ <div id="ptag" style="opacity:0"><div class="n">Vintage tin jet + box</div><div class="v" id="pv">~€1,850</div></div>
  <div id="spks"></div>
  <div id="punch" class="sh" style="opacity:0"><div>BEST CRASH</div><div>OF MY <span>LIFE.</span></div></div>
+ <div id="redv"></div><div id="frz"></div><div id="slow"><i></i>SLOW-MO</div><div id="ring"></div><div id="jbr"><i></i><i></i><i></i><i></i></div>
  <div id="nv"></div>
  <div id="end"><div class="ic" id="eic"></div><div class="w gold">Sofa Money</div><div class="l">Link in bio · <b>@sofamoney.official</b></div></div>
  <div id="flash"></div>
- <div id="legal">Example amounts · Demo app</div>
  <div class="bar" style="top:0"></div><div class="bar" style="bottom:0"></div>
 </div>
 <script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
@@ -369,7 +378,8 @@ const mDark=std({color:0x0b0b0b,roughness:.6});
   const st_=mesh(g,m,0,.074,.004,body);st_.rotation.x=-Math.PI/2;st_.scale.set(.36,.36,.6)}
  const fS=new THREE.Shape();fS.moveTo(0,0);fS.lineTo(.052,0);fS.lineTo(.068,.056);fS.lineTo(.046,.058);fS.closePath();
  const finC=cv(512,512,()=>{}),finT=tex(finC);finT.repeat.set(-1/.07,1/.06);finT.offset.set(1,0);FIN.c=finC;FIN.t=finT;const mFin=phys({map:finT,bumpMap:finT,bumpScale:.4,metalness:.5,roughness:.34,clearcoat:.8,clearcoatRoughness:.2,envMapIntensity:.9});JETM.add(mFin);
- const fin=mesh(new THREE.ExtrudeGeometry(fS,{depth:.003,bevelEnabled:true,bevelThickness:.001,bevelSize:.001,bevelSegments:2}),mFin,.0015,.017,-.058,body);fin.rotation.y=-Math.PI/2;
+FIN.mesh=null;
+ const fin=mesh(new THREE.ExtrudeGeometry(fS,{depth:.003,bevelEnabled:true,bevelThickness:.001,bevelSize:.001,bevelSegments:2}),mFin,.0015,.017,-.058,body);fin.rotation.y=-Math.PI/2;FIN.mesh=fin;
  const podG=new THREE.LatheGeometry([[0,0],[.0075,0],[.0102,.008],[.0108,.03],[.0098,.048],[.0085,.052],[0,.052]].map(([r,y])=>new THREE.Vector2(r,y)),32);
  for(const s of[-1,1]){const pod=mesh(podG,mRedT,s*.034,.009,-.016,body);pod.rotation.x=-Math.PI/2;const it=mesh(new THREE.CircleGeometry(.0084,24),mDark,s*.034,.009,-.0685,body);it.rotation.y=Math.PI;bx(.016,.004,.022,mTinP,s*.024,.008,-.04,body)}
  const mTy=std({color:0x151515,roughness:.75}),mSt=std({color:0x9a9a9a,metalness:1,roughness:.35});
@@ -470,8 +480,17 @@ window.renderAt=function(t){
  show('ptag',tg?clamp((t-T.tag)/.12):0);
  const pu=t>=T.punch&&t<T.logo;show('punch',pu?clamp((t-T.punch)/.08):0);$('punch').style.transform=`scale(${pu?1.2-.2*eob(clamp((t-T.punch)/.3)):1})`;
  const en=t>=T.logo&&t<T.loop;show('end',en?1:0);$('eic').style.transform=`scale(${en?eob(clamp((t-T.logo)/.3)):0})`;
+ // graphics
+ show('slow',crash&&t<T.freeze&&t>=T.slow-.1&&t<T.loop?(Math.floor(t*3)%2?1:.35):0);
+ show('redv',crash&&t<T.freeze?(.45+.4*rOn+.2*bOn):0);
+ show('frz',t>=T.freeze&&t<T.reveal?1:0);
+ if(yr&&FIN.mesh){const w=FIN.mesh.localToWorld(V(.042,.0213,.0)).project(camera);const rk=clamp((t-T.n3-.15)/.3);const el=$('ring');el.style.left=((w.x*.5+.5)*W)+'px';el.style.top=((-w.y*.5+.5)*H)+'px';el.style.opacity=rk;el.style.transform=`scale(${1.5-.5*eob(rk)}) rotate(-8deg)`}else show('ring',0);
+ const jb=t>=T.scan+.15&&t<T.logo;if(jb){box3.setFromObject(body);let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;for(let i=0;i<8;i++){vv.set(i&1?box3.max.x:box3.min.x,i&2?box3.max.y:box3.min.y,i&4?box3.max.z:box3.min.z).project(camera);const sx=(vv.x*.5+.5)*W,sy=(-vv.y*.5+.5)*H;x0=Math.min(x0,sx);x1=Math.max(x1,sx);y0=Math.min(y0,sy);y1=Math.max(y1,sy)}
+  const el=$('jbr'),pd=24,bk=eob(clamp((t-T.scan-.15)/.3));x0=Math.max(40,x0-pd);x1=Math.min(1040,x1+pd);y0-=pd;y1+=pd;el.style.left=x0+'px';el.style.top=y0+'px';el.style.width=(x1-x0)+'px';el.style.height=(y1-y0)+'px';el.style.opacity=clamp((t-T.scan-.15)/.15);el.style.transform=`scale(${1.3-.3*bk})`}else show('jbr',0);
  // grade
- const frz=t>=T.freeze&&t<T.reveal;grade.uniforms.desat.value=frz?.85:0;grade.uniforms.zoom.value=frz?1.04+.03*eo(clamp((t-T.freeze)/.15)):1;grade.uniforms.time.value=t;grade.uniforms.dark.value=0;
+ const frz=t>=T.freeze&&t<T.reveal;grade.uniforms.desat.value=frz?.85:0;let zm=1;const pz_=(a,k,d)=>{if(t>=a&&t<a+d)zm*=1+k*(1-eo((t-a)/d))};pz_(0,.06,.35);pz_(T.reveal,-.0,.1);pz_(T.tail,.1,.4);pz_(T.scan,.08,.35);pz_(T.lock,.14,.45);pz_(T.logo,.06,.3);
+ if(t>=T.punch&&t<T.logo)zm*=1+.06*ss((t-T.punch)/(T.logo-T.punch));if(t>=T.n2&&t<T.tail)zm*=1+.04*ss((t-T.n2)/(T.tail-T.n2));
+ grade.uniforms.zoom.value=frz?1.04+.03*eo(clamp((t-T.freeze)/.15)):zm;grade.uniforms.time.value=t;grade.uniforms.dark.value=0;
  let fl2=0;if(t>=T.tail&&t<T.tail+.06)fl2=.35;if(t>=T.lock&&t<T.lock+.08)fl2=.5;if(t>=T.logo&&t<T.logo+.06)fl2=.35;show('flash',fl2);
  renderer.shadowMap.needsUpdate=true;
  composer.render()};

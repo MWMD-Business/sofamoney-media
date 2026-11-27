@@ -104,6 +104,19 @@ m.add(T['logo'], load(SND + 'chirp.wav'), .95)
 m.add(T['logo'], boom(1.0, 46), .5); m.add(T['logo'] + .02, chime(.9, 784), .25)
 pre = bp(noise(.15), 300, 4000) * np.linspace(0, 1, int(round(.15 * SR))) ** 2
 m.add(T['loop'], pre, .6); m.add(T['loop'], jet_roar(.15)[::-1] * .8, .4)
+# ================= background music after the reveal (light plucky groove -> the drop) =================
+def pluck(f, d=.32):
+    t = t_(d); return (np.sin(2 * np.pi * f * t) + .35 * np.sin(4 * np.pi * f * t) + .12 * np.sin(6 * np.pi * f * t)) * np.exp(-t * 11)
+b8 = 60 / 124 / 2; notes = [220, 261.63, 329.63, 392, 329.63, 261.63, 293.66, 349.23]
+t0 = T['reveal'] + .25; i = 0
+while t0 + i * b8 < L - .05:
+    m.add(t0 + i * b8, pluck(notes[i % 8] * (1 if (i // 8) % 2 == 0 else 1.122)), .16 * min(1, .4 + i * .03), (-.3, .3)[i % 2]); i += 1
+m.add(T['reveal'] + .25, fade(warm_pad(L - T['reveal'] - .25, 110.0), .4, .1), .18)
+m.add(T['tail'], beat(T['scan'] - T['tail'])[:int((T['scan'] - T['tail']) * SR)] * .5, .22)
+m.add(T['scan'], beat(L - T['scan']) * .7, .26)
+m.add(T['logo'], fade(warm_pad(T['loop'] - T['logo'], 146.83), .02, .15), .3)
+m.add(T['tail'] - .25, load(SND + 'whoosh.wav'), .45)
+m.add(L - .3, load(SND + 'whoosh.wav')[::-1], .4)
 # ================= narrator =================
 for k in ('n1', 'n2', 'n3', 'n4'):
     m.add(T[k], vo(k), 1.0, voice=True)

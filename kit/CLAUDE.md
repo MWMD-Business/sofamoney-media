@@ -10,6 +10,7 @@ The owner is **Mohammed** (founder, based in Navan, Ireland). He is not a progra
 - **He loves pop-up questions.** Before building anything, ask him with the AskUserQuestion tool:
   the idea (offer 3-4 concrete options), the hook, the look, the sound, voice or text only, the length.
   Give real options with short descriptions and put your recommendation first.
+- **Use graphics, background music, and zoom in/out where it helps** (27 Nov).
 - **Ask plenty of pop-up questions, and keep every message short** (no extra words). Mohammed asked for this (26 Nov).
 - Show him progress early (a few test frames) so he can steer before the long render.
 - He posts the videos himself. Never try to post anything.
@@ -138,7 +139,7 @@ Keep music low under the narrator (duck it), and make sound effects end before a
 
 **Words:** say "mom", not "mam". No nickname ("Hamoudyi"). No 3:07 / 307 references on Sofa Money videos.
 
-**Labels:** every amount says Example and app screens say Demo (e.g. "Example amounts · Demo app"). Any real
+**Labels (updated 27 Nov by Mohammed): no "Demo", no "Example" / "example data" and no "Made with AI" text anywhere.** Old rule, now replaced: every amount says Example and app screens say Demo (e.g. "Example amounts · Demo app"). Any real
 fact needs a reliable source, shown on screen and in the caption. Stories that only use Example amounts need
 no source. When Mohammed posts, the **AI label is always on**.
 **Never write "Made with AI" (or any AI text) in anything you make**: not in videos, end cards, Stories, covers or
