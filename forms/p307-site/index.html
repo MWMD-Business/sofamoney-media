@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=969edae0-07d3-43bb-acd0-77575b62713a
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Project 307</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Project 307">
+<meta property="og:description" content="This file was never meant to get out. Project 307 is looking for new members. Apply for File 004. Run by @mwdonig in Ireland.">
+<meta property="og:image" content="https://project307.netlify.app/og.png">
+<meta property="og:url" content="https://project307.netlify.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<meta name="description" content="Project 307: a group of apps and ideas, run by @mwdonig in Ireland. Files 001-003: Sofa Money, Safe Key, NexTalk. Now looking for new members: apply for File 004.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@300;500;700;800&display=swap">
+<style>
+/* Layout: one long "leaked file" read on a black screen. Terminal hero + stamp, the objective, three file windows, a directory and a live terminal, then the follow card.
+   Single dark look on purpose (the Project 307 brand from the Reels and the profile picture): black, white and stamp red; grey paper for the scanned files. */
+:root{
+  --ink:#050505; --panel:#0D0D0D; --panel2:#151515; --line:#2B2B2B; --text:#EDEDED; --mute:#8F8F8F; --dim:#5E5E5E;
+  --red:#F0372E; --red-ink:#120302; --paper:#D3D3CF; --paper-ink:#141414; --paper-mute:#585858;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; --stamp:'Anton',Impact,'Arial Narrow',sans-serif;
+  --gut:max(16px,env(safe-area-inset-left,0px)); --gutr:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--mono);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  padding-left:var(--gut);padding-right:var(--gutr);padding-block:0 40px;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(0deg,rgba(255,255,255,.028) 0 2px,rgba(0,0,0,0) 2px 5px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.dotgrid{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle,rgba(255,255,255,.06) 1.4px,rgba(0,0,0,0) 2px) 0 0/44px 44px}
+
+/* top bar */
+.hud{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px 0;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.hud .ch{display:flex;align-items:center;gap:10px}
+.hud .ch i{width:11px;height:11px;background:var(--red);animation:blink 1s steps(1) infinite}
+.hud .ts{color:var(--text);font-variant-numeric:tabular-nums}
+.hud .sub{color:var(--mute);letter-spacing:.1em}
+@keyframes blink{50%{opacity:.15}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(48px,9vw,110px) clamp(40px,7vw,90px)}
+.term-lines{margin:0 0 26px;color:var(--mute);font-size:14px;line-height:1.75}
+.term-lines p{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.term-lines .bar{display:inline-block;vertical-align:-3px;width:min(220px,40vw);height:16px;border:2px solid #4a4a4a;padding:2px;margin:0 8px}
+.term-lines .bar i{display:block;height:100%;background:var(--text);transform-origin:0 50%;animation:fill 1.1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fill{from{transform:scaleX(.86)}to{transform:scaleX(1)}}
+h1{margin:0;font-weight:800;font-size:clamp(38px,6.6vw,84px);line-height:1.04;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
+h1 .cur{display:inline-block;width:.55em;height:.86em;background:var(--red);vertical-align:-.08em;margin-left:.08em;animation:blink 1s steps(1) infinite}
+.lede{max-width:56ch;margin:26px 0 0;color:#C9C9C9;font-size:clamp(15px,1.6vw,17px)}
+.lede b{color:var(--text);font-weight:700}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;font:700 14px/1 var(--mono);letter-spacing:.06em;text-decoration:none;border:2px solid var(--text);text-transform:uppercase;transition:background .15s,color .15s}
+.btn.solid{background:var(--text);color:var(--ink)}
+.btn.solid:hover{background:var(--red);border-color:var(--red);color:var(--red-ink)}
+.btn.ghost:hover{background:var(--text);color:var(--ink)}
+.stampwrap{position:relative;justify-self:center;width:min(100%,420px);aspect-ratio:1;max-width:100%}
+.stampwrap svg{width:100%;height:100%;display:block;overflow:visible;transform:rotate(-9deg);animation:slam .5s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes slam{from{transform:rotate(-9deg) scale(1.12)}to{transform:rotate(-9deg) scale(1)}}
+.stampwrap .note{position:absolute;right:0;bottom:-6px;font-size:12px;letter-spacing:.18em;color:var(--mute);text-transform:uppercase}
+
+/* section heads */
+.sec{padding-block:clamp(44px,7vw,84px);border-top:1px solid var(--line)}
+.label{display:flex;align-items:center;gap:16px;margin:0 0 30px;font:700 13px/1 var(--mono);letter-spacing:.32em;color:var(--red);text-transform:uppercase}
+.label::after{content:"";flex:1;height:2px;background:var(--red);opacity:.6}
+
+/* objective */
+.obj{list-style:none;margin:0;padding:0;display:grid;gap:clamp(10px,1.6vw,16px)}
+.obj li{display:flex;align-items:center;gap:clamp(14px,2.4vw,28px)}
+.obj em{flex:none;width:2.6ch;font:500 15px/1 var(--mono);font-style:normal;color:var(--mute)}
+.obj b{font-weight:800;font-size:clamp(34px,6vw,76px);line-height:1.08;letter-spacing:-.015em}
+.obj li.hi b{background:var(--red);color:var(--red-ink);padding:0 .22em;margin-left:-.22em}
+.obj-note{margin:26px 0 0;color:var(--mute);font-size:14px;max-width:60ch}
+
+/* files */
+.files{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.win{background:var(--panel);border:2px solid #333;box-shadow:0 30px 70px rgba(0,0,0,.6);min-width:0}
+.win .tb{display:flex;align-items:center;gap:8px;padding:10px 12px;background:var(--panel2);border-bottom:2px solid #262626;font-size:12px;letter-spacing:.05em}
+.win .tb i{flex:none;width:10px;height:10px;border:2px solid #555}
+.win .tb span{margin-left:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.win .tb em{margin-left:auto;font-style:normal;color:var(--red);letter-spacing:.14em;font-size:11px;white-space:nowrap}
+.pg{position:relative;margin:12px;padding:20px 18px 18px;background:var(--paper);color:var(--paper-ink);overflow:hidden;min-height:360px}
+.pg::before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.14),rgba(0,0,0,0) 12%,rgba(0,0,0,0) 88%,rgba(0,0,0,.16)),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:multiply;opacity:.55}
+.pg .hd{display:flex;justify-content:space-between;gap:10px;font:700 11px/1.3 var(--mono);letter-spacing:.14em}
+.pg .hd2{margin-top:8px;padding-bottom:12px;border-bottom:3px solid var(--paper-ink);font:500 11px/1 var(--mono);letter-spacing:.28em;color:var(--paper-mute)}
+.pg dl{margin:16px 0 0;display:grid;gap:4px}
+.pg dt{font:500 10px/1.3 var(--mono);letter-spacing:.22em;color:var(--paper-mute);margin-top:8px}
+.pg dd{margin:0;font-weight:800;font-size:19px;line-height:1.2;overflow-wrap:anywhere}
+.pg dd.big{font-size:26px}
+.pg .stat{margin-top:14px;padding-top:12px;border-top:2px dashed #8a8a8a;font:800 15px/1.3 var(--mono)}
+.pg .stat span{display:block;font:500 10px/1.3 var(--mono);letter-spacing:.22em;color:var(--paper-mute);margin-bottom:4px}
+.pg .rd{display:block;height:17px;background:#070707;margin:12px 0 0}
+.pg .lab{display:block;font:500 10px/1 var(--mono);letter-spacing:.22em;color:var(--paper-mute);margin-top:16px}
+.pg .st{position:absolute;z-index:5;pointer-events:none;width:78%;left:11%;top:42%;transform:rotate(-9deg)}
+.pg .st svg{display:block;width:100%;height:auto;overflow:visible}
+.pg.f1{padding-bottom:104px}
+.pg .st.test{width:70%;left:auto;right:6%;top:auto;bottom:16px;transform:rotate(-7deg)}
+.win .acts{display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 14px}
+.chip{display:inline-flex;align-items:center;padding:8px 11px;border:1.5px solid #4a4a4a;font:700 12px/1 var(--mono);letter-spacing:.05em;text-decoration:none;color:var(--text)}
+.chip:hover{border-color:var(--red);color:var(--red)}
+.chip.red{border-color:var(--red);color:var(--red)}
+.win .wait{padding:0 12px 14px;font-size:12px;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+
+/* directory + terminal */
+.dir{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.ls{margin:0;padding:22px;background:var(--panel);border:2px solid #2a2a2a;font-size:15px}
+.ls .cmd{margin:0 0 14px;color:var(--mute)}
+.ls .r{display:flex;align-items:center;gap:12px;min-height:40px}
+.ls .no{flex:none;color:var(--mute);width:3ch;font-variant-numeric:tabular-nums}
+.ls .nm{font-weight:800;white-space:nowrap}
+.ls .bar{flex:none;width:clamp(70px,12vw,140px);height:15px;background:#2f2f2f}
+.ls .dt{flex:1;min-width:10px;border-bottom:3px dotted #3d3d3d}
+.ls .s{flex:none;font:700 11px/1 var(--mono);letter-spacing:.12em;padding:6px 8px;white-space:nowrap}
+.ls .s.t{background:var(--text);color:var(--ink)}
+.ls .s.c{color:var(--red);box-shadow:inset 0 0 0 2px var(--red)}
+.ls .s.l{color:var(--mute);box-shadow:inset 0 0 0 2px #444}
+.tty{display:flex;flex-direction:column;background:#000;border:2px solid #2a2a2a;min-height:340px;min-width:0}
+.tty .tb{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:2px solid #1d1d1d;font-size:12px;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+.tty .out{flex:1;padding:14px 16px;font-size:14px;line-height:1.65;overflow-y:auto;max-height:320px;overflow-wrap:anywhere}
+.tty .out p{margin:0 0 6px}
+.tty .out .you{color:var(--mute)}
+.tty .out .err{color:var(--red)}
+.tty .out a{color:var(--text);text-decoration-color:var(--red);text-underline-offset:3px}
+.tty form{display:flex;align-items:center;gap:10px;padding:12px 16px;border-top:2px solid #1d1d1d}
+.tty form span{color:var(--red);font-weight:700}
+.tty input{flex:1;min-width:0;background:transparent;border:0;color:var(--text);font:500 15px/1.4 var(--mono);caret-color:var(--red)}
+.tty input:focus{outline:none}
+.tty form:focus-within{box-shadow:inset 0 0 0 2px var(--red)}
+.tty .hint{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 14px}
+.tty .hint button{background:transparent;border:1.5px solid #333;color:var(--mute);font:500 12px/1 var(--mono);padding:7px 9px;cursor:pointer}
+.tty .hint button:hover{border-color:var(--red);color:var(--text)}
+
+/* follow */
+.follow{text-align:left;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end}
+.follow h2{margin:0;font-weight:800;font-size:clamp(32px,5.4vw,66px);line-height:1.05;letter-spacing:-.015em;text-transform:uppercase;text-wrap:balance}
+.follow .meta{display:grid;gap:10px;justify-items:start}
+.handle{display:inline-block;background:var(--text);color:var(--ink);font:800 clamp(20px,2.6vw,28px)/1 var(--mono);padding:14px 18px;text-decoration:none}
+.handle:hover{background:var(--red);color:var(--red-ink)}
+.run{font-size:13px;letter-spacing:.22em;color:var(--mute);text-transform:uppercase}
+.run a{text-decoration:none;color:var(--text)}
+.run a:hover{color:var(--red)}
+.next{display:flex;align-items:center;gap:10px;font:700 12px/1 var(--mono);letter-spacing:.2em;color:var(--red);text-transform:uppercase}
+.next i{display:inline-block;width:150px;height:16px;background:#2c2c2c}
+footer{border-top:1px solid var(--line);padding-block:26px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--dim);font-size:12px;letter-spacing:.08em}
+footer p{margin:0;max-width:70ch}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .stampwrap{width:min(78%,340px);order:-1;justify-self:start;margin-left:6%}
+  .files{grid-template-columns:minmax(0,1fr)}
+  .pg{min-height:0}
+  .dir{grid-template-columns:minmax(0,1fr)}
+  .follow{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){
+  body{font-size:15px}
+  .hud .sub{display:none}
+  .ls{padding:16px;font-size:13px}
+  .ls .r{gap:8px}
+  .ls .s{font-size:10px;padding:5px 6px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="dotgrid" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="hud">
+    <span class="ch"><i aria-hidden="true"></i>CH.307 · ENCRYPTED</span>
+    <span class="sub">SRC: UNKNOWN</span>
+    <span class="ts" id="clock" aria-label="Clock">03:07:00</span>
+  </header>
+
+  <section class="hero" aria-labelledby="h1">
+    <div>
+      <div class="term-lines" aria-hidden="true">
+        <p>&gt; open /p307/leak_307.dat</p>
+        <p>&gt; decrypting<span class="bar"><i></i></span>100%</p>
+        <p>&gt; 1 file found. opening…</p>
+      </div>
+      <h1 id="h1">This file was never meant to get out.<span class="cur" aria-hidden="true"></span></h1>
+      <p class="lede"><b>Project 307</b> is a small group of apps and ideas, run by <b>@mwdonig</b> in Ireland. Three files are being built: <b>Sofa Money</b>, <b>Safe Key</b> and <b>NexTalk</b>. The details are classified. <b>We're looking for new members.</b> Got an app or product idea? File 004 could be yours.</p>
+      <div class="ctas">
+        <a class="btn solid" href="https://www.instagram.com/project307am/" target="_blank" rel="noopener">Follow @project307am</a>
+        <a class="btn ghost" href="#files">Open the files</a>
+        <a class="btn solid" href="https://project307application.netlify.app/" target="_blank" rel="noopener" style="background:var(--red);border-color:var(--red);color:var(--red-ink)">Apply for File 004</a>
+      </div>
+    </div>
+    <div class="stampwrap" role="img" aria-label="Round red stamp: Project 307, classified"><svg viewBox='0 0 760 760'><defs><filter id='stink' x='-5%' y='-5%' width='110%' height='110%'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='7' result='n'/><feColorMatrix in='n' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.75' result='m'/><feComposite in='SourceGraphic' in2='m' operator='in' result='s'/><feTurbulence type='turbulence' baseFrequency='.02' numOctaves='2' seed='3' result='w'/><feDisplacementMap in='s' in2='w' scale='5'/></filter><path id='starc' d='M 118 380 A 262 262 0 1 1 642 380 A 262 262 0 1 1 118 380'/></defs><g filter='url(#stink)'><circle cx='380' cy='380' r='305' fill='none' stroke='#F0372E' stroke-width='22'/><circle cx='380' cy='380' r='220' fill='none' stroke='#F0372E' stroke-width='9'/><text font-family='Anton' font-size='46' letter-spacing='8' fill='#F0372E'><textPath href='#starc' startOffset='0'>PROJECT 307 ★ CLASSIFIED ★ PROJECT 307 ★ CLASSIFIED ★</textPath></text><text x='380' y='464' text-anchor='middle' font-family='Anton' font-size='236' letter-spacing='4' fill='#F0372E'>307</text><rect x='235' y='255' width='290' height='12' fill='#F0372E'/><rect x='235' y='494' width='290' height='12' fill='#F0372E'/></g></svg><span class="note">Stamped 03:07</span></div>
+  </section>
+
+  <section class="sec" aria-labelledby="obj-h">
+    <h2 class="label" id="obj-h">Objective</h2>
+    <ol class="obj">
+      <li><em>01</em><b>AI INCOME.</b></li>
+      <li><em>02</em><b>USEFUL APPS.</b></li>
+      <li class="hi"><em>03</em><b>FREEDOM.</b></li>
+    </ol>
+    <p class="obj-note">Build things people actually use. Let them earn while we sleep. Keep the time for what matters.</p>
+  </section>
+
+  <section class="sec" id="files" aria-labelledby="files-h">
+    <h2 class="label" id="files-h">The files</h2>
+    <div class="files">
+      <article class="win" aria-label="File 001, Sofa Money">
+        <div class="tb"><i></i><i></i><i></i><span>FILE_001.PDF</span><em>ATTEMPT ONE</em></div>
+        <div class="pg f1">
+          <div class="hd"><span>PROJECT 307</span><span>FILE 001</span></div>
+          <div class="hd2">ATTEMPT ONE</div>
+          <dl>
+            <dt>NAME</dt><dd class="big">SOFA MONEY</dd>
+            <dt>HANDLE</dt><dd>@sofamoney.app</dd>
+            <dt>WHAT IT DOES</dt><dd>Finds the money hiding in your home: old stuff worth selling and subscriptions you forgot.</dd>
+          </dl>
+          <div class="stat"><span>STATUS</span>Out there. In testing.</div>
+          <div class="st test" aria-hidden="true"><svg viewBox='0 0 640 176'><defs><filter id='itink' x='-5%' y='-5%' width='110%' height='110%'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='11' result='n'/><feColorMatrix in='n' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.75' result='m'/><feComposite in='SourceGraphic' in2='m' operator='in' result='s'/><feTurbulence type='turbulence' baseFrequency='.02' numOctaves='2' seed='3' result='w'/><feDisplacementMap in='s' in2='w' scale='5'/></filter></defs><g filter='url(#itink)'><rect x='9' y='9' width='622' height='158' rx='18' fill='none' stroke='#F0372E' stroke-width='14'/><rect x='28' y='28' width='584' height='120' rx='10' fill='none' stroke='#F0372E' stroke-width='5'/><text x='325.0' y='128' text-anchor='middle' font-family='Anton' font-size='112' letter-spacing='10' fill='#F0372E'>IN TESTING</text></g></svg></div>
+        </div>
+        <div class="acts">
+          <a class="chip red" href="https://sofamoney-test.netlify.app" target="_blank" rel="noopener">Try the free web test (18+)</a>
+          <a class="chip" href="https://www.instagram.com/sofamoney.app/" target="_blank" rel="noopener">@sofamoney.app</a>
+        </div>
+      </article>
+      <article class="win" aria-label="File 002, Safe Key, details classified">
+        <div class="tb"><i></i><i></i><i></i><span>FILE_002.PDF</span><em>ATTEMPT TWO</em></div>
+        <div class="pg">
+          <div class="hd"><span>PROJECT 307</span><span>FILE 002</span></div>
+          <div class="hd2">ATTEMPT TWO</div>
+          <span class="lab">NAME</span><span style="display:block;margin-top:6px;font-weight:800;font-size:26px;line-height:1.2">SAFE KEY</span>
+          <span class="lab">WHAT IT DOES</span><span class="rd" style="width:88%"></span><span class="rd" style="width:70%"></span>
+          <span class="lab">STATUS</span><span class="rd" style="width:44%"></span>
+          <span class="rd" style="width:94%;margin-top:26px"></span><span class="rd" style="width:76%"></span><span class="rd" style="width:84%"></span>
+          <div class="st" aria-hidden="true"><svg viewBox='0 0 640 176'><defs><filter id='c2ink' x='-5%' y='-5%' width='110%' height='110%'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='7' result='n'/><feColorMatrix in='n' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.75' result='m'/><feComposite in='SourceGraphic' in2='m' operator='in' result='s'/><feTurbulence type='turbulence' baseFrequency='.02' numOctaves='2' seed='3' result='w'/><feDisplacementMap in='s' in2='w' scale='5'/></filter></defs><g filter='url(#c2ink)'><rect x='9' y='9' width='622' height='158' rx='18' fill='none' stroke='#F0372E' stroke-width='14'/><text x='325.0' y='128' text-anchor='middle' font-family='Anton' font-size='112' letter-spacing='10' fill='#F0372E'>CLASSIFIED</text></g></svg></div>
+        </div>
+        <p class="wait">Name released · details classified</p>
+      </article>
+      <article class="win" aria-label="File 003, NexTalk, details classified">
+        <div class="tb"><i></i><i></i><i></i><span>FILE_003.PDF</span><em>ATTEMPT THREE</em></div>
+        <div class="pg">
+          <div class="hd"><span>PROJECT 307</span><span>FILE 003</span></div>
+          <div class="hd2">ATTEMPT THREE</div>
+          <span class="lab">NAME</span><span style="display:block;margin-top:6px;font-weight:800;font-size:26px;line-height:1.2">NEXTALK</span>
+          <span class="lab">WHAT IT DOES</span><span class="rd" style="width:80%"></span><span class="rd" style="width:90%"></span>
+          <span class="lab">STATUS</span><span class="rd" style="width:38%"></span>
+          <span class="rd" style="width:86%;margin-top:26px"></span><span class="rd" style="width:92%"></span><span class="rd" style="width:64%"></span>
+          <div class="st" aria-hidden="true"><svg viewBox='0 0 640 176'><defs><filter id='c3ink' x='-5%' y='-5%' width='110%' height='110%'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='8' result='n'/><feColorMatrix in='n' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.75' result='m'/><feComposite in='SourceGraphic' in2='m' operator='in' result='s'/><feTurbulence type='turbulence' baseFrequency='.02' numOctaves='2' seed='3' result='w'/><feDisplacementMap in='s' in2='w' scale='5'/></filter></defs><g filter='url(#c3ink)'><rect x='9' y='9' width='622' height='158' rx='18' fill='none' stroke='#F0372E' stroke-width='14'/><text x='325.0' y='128' text-anchor='middle' font-family='Anton' font-size='112' letter-spacing='10' fill='#F0372E'>CLASSIFIED</text></g></svg></div>
+        </div>
+        <p class="wait">Name released · details classified</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="join" aria-labelledby="join-h">
+    <h2 class="label" id="join-h">Now recruiting</h2>
+    <div class="follow">
+      <h2>We're looking for new members.<br>File 004 is open.</h2>
+      <div class="meta">
+        <a class="handle" href="https://project307application.netlify.app/" target="_blank" rel="noopener" style="background:var(--red);color:var(--red-ink)">Apply for File 004 →</a>
+        <span class="run">Got an app or product idea? Build it with Project 307.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="dir-h">
+    <h2 class="label" id="dir-h">Directory</h2>
+    <div class="dir">
+      <div class="ls" aria-label="Directory of Project 307 files">
+        <p class="cmd">&gt; ls /project307</p>
+        <div class="r"><span class="no">001</span><span class="nm">SOFA MONEY</span><i class="dt"></i><span class="s t">IN TESTING</span></div>
+        <div class="r"><span class="no">002</span><span class="nm">SAFE KEY</span><i class="dt"></i><span class="s c">CLASSIFIED</span></div>
+        <div class="r"><span class="no">003</span><span class="nm">NEXTALK</span><i class="dt"></i><span class="s c">CLASSIFIED</span></div>
+        <div class="r"><span class="no">004</span><span class="nm">YOUR IDEA?</span><i class="dt"></i><a class="s t" href="https://project307application.netlify.app/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--red);color:var(--red-ink)">OPEN · APPLY</a></div>
+        <div class="r"><span class="no">005</span><i class="bar" aria-label="redacted"></i><i class="dt"></i><span class="s l">LOCKED</span></div>
+        <div class="r"><span class="no">006</span><i class="bar" aria-label="redacted"></i><i class="dt"></i><span class="s l">LOCKED</span></div>
+      </div>
+      <div class="tty">
+        <div class="tb"><span>Terminal</span><span>p307@leak</span></div>
+        <div class="out" id="out" aria-live="polite">
+          <p>Connected. Type <b>help</b> to see what you can do.</p>
+        </div>
+        <div class="hint" aria-label="Quick commands">
+          <button type="button" data-cmd="help">help</button><button type="button" data-cmd="ls">ls</button><button type="button" data-cmd="open 001">open 001</button><button type="button" data-cmd="open 002">open 002</button><button type="button" data-cmd="objective">objective</button><button type="button" data-cmd="apply">apply</button>
+        </div>
+        <form id="tty-form" autocomplete="off">
+          <span aria-hidden="true">&gt;</span><label class="sr" for="tty-in">Command</label>
+          <input id="tty-in" type="text" spellcheck="false" autocapitalize="off" placeholder="type a command">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="fol-h">
+    <div class="follow">
+      <h2 id="fol-h">Follow before the next file opens. Or apply to be File 004.</h2>
+      <div class="meta">
+        <a class="handle" href="https://www.instagram.com/project307am/" target="_blank" rel="noopener">@project307am</a>
+        <span class="run">Run by <a href="https://www.instagram.com/mwdonig/" target="_blank" rel="noopener">@mwdonig</a></span>
+        <span class="next">Next file: <i aria-label="redacted"></i></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Project 307 · Made in Ireland · 2026</p>
+    <p>File 001: Sofa Money's free web test is for adults (18+).</p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  // the 03:07 clock: the minute never changes, the seconds keep running
+  const t0 = Date.now(), clock = $('clock');
+  const tick = () => { const s = Math.floor((Date.now() - t0) / 1000) % 60; clock.textContent = '03:07:' + String(s).padStart(2, '0'); };
+  tick(); setInterval(tick, 1000);
+  // terminal
+  const out = $('out'), form = $('tty-form'), input = $('tty-in');
+  const esc = s => s.replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+  const link = (href, text) => `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
+  const say = (html, cls) => { const p = document.createElement('p'); if (cls) p.className = cls; p.innerHTML = html; out.appendChild(p); out.scrollTop = out.scrollHeight; };
+  const LS = '001  SOFA MONEY ····· IN TESTING<br>002  SAFE KEY ······· CLASSIFIED<br>003  NEXTALK ········ CLASSIFIED<br>004  YOUR IDEA? ····· OPEN · type <b>apply</b><br>005  ██████████ ····· LOCKED<br>006  ██████████ ····· LOCKED';
+  const CMDS = {
+    help: () => say('commands: <b>ls</b> · <b>open 001</b> · <b>open 002</b> · <b>objective</b> · <b>apply</b> · <b>whoami</b> · <b>follow</b> · <b>clear</b>'),
+    ls: () => say(LS),
+    objective: () => say('01 AI income · 02 Useful apps · 03 <span class="err">Freedom</span>'),
+    apply: () => say('We\'re looking for new members. ' + link('https://project307application.netlify.app/', 'Apply for File 004') + '.'),
+    whoami: () => say('A visitor at 03:07. You found the file.'),
+    follow: () => say('Follow ' + link('https://www.instagram.com/project307am/', '@project307am') + '. Run by ' + link('https://www.instagram.com/mwdonig/', '@mwdonig') + '.'),
+    clear: () => { out.innerHTML = ''; },
+  };
+  const open = n => {
+    if (n === '001' || n === '1') return say('FILE 001 · SOFA MONEY · finds the money hiding in your home · status: out there, in testing · ' + link('https://sofamoney-test.netlify.app', 'free web test (18+)'));
+    if (n === '002' || n === '2') return say('FILE 002 · SAFE KEY · details: <span class="err">CLASSIFIED</span>');
+    if (n === '003' || n === '3') return say('FILE 003 · NEXTALK · details: <span class="err">CLASSIFIED</span>');
+    if (n === '004' || n === '4') return say('FILE 004 · OPEN. We\'re looking for new members. ' + link('https://project307application.netlify.app/', 'Apply for File 004'));
+    if (['005', '006', '5', '6'].includes(n)) return say('LOCKED. Not yet.', 'err');
+    say('No file called ' + esc(n) + '. Try <b>ls</b>.', 'err');
+  };
+  const run = raw => {
+    const c = raw.trim().toLowerCase(); if (!c) return;
+    say('&gt; ' + esc(c), 'you');
+    if (c.startsWith('open')) return open(c.slice(4).trim() || '?');
+    if (c.startsWith('cat ')) return open(c.slice(4).replace(/\D/g, ''));
+    if (c.startsWith('sudo')) return say('Nice try.', 'err');
+    if (CMDS[c]) return CMDS[c]();
+    say('Command not found: ' + esc(c) + '. Type <b>help</b>.', 'err');
+  };
+  form.addEventListener('submit', e => { e.preventDefault(); run(input.value); input.value = ''; });
+  document.querySelectorAll('.hint button').forEach(b => b.addEventListener('click', () => { run(b.dataset.cmd); input.focus({preventScroll: true}); }));
+})();
+</script>
+
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="969edae0-07d3-43bb-acd0-77575b62713a" data-app-host="app.netlify.com" data-account-tier="free"></script>
